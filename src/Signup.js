@@ -11,7 +11,7 @@ class Signup extends Component {
             password: ''
         }
     }
-
+// This is the correctc code
     handleSubmit(event) {
         alert(this.state.fullname + " " + this.state.age + " " + this.state.city + " " + this.state.password);
     }
