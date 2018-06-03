@@ -2,70 +2,37 @@
 import React, { Component } from 'react';
 
 class Signup extends Component {
-    constructor(props){
+    constructor(props) {
         super(props)
-    this.state ={
-        fullname: '',
-        age:'',
-        city: '',
-        password: ''
-
-    };
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-
+        this.state = {
+            fullname: '',
+            age: '',
+            city: '',
+            password: ''
+        }
     }
 
-    handleChangekey(key, event){
-        this.setState({key: event.target.value});
-    }
-
-
-    handleSubmit(event){
+    handleSubmit(event) {
         alert(this.state.fullname + " " + this.state.age + " " + this.state.city + " " + this.state.password);
-        event.preventDefault();
     }
-    
 
     render() {
-        
         return (
             <form>
-                <label>
+                Fullname: <br />
+                <input type="text" name="fullname" value={this.state.fullname} onChange={(event) => this.setState({fullname: event.target.value })} /> <br />
 
-            Fullname: <br/>
-            <input type="text" name ="fullname" value ={this.state.name} onChange={this.handleChange}/> <br/>
-            </label>
-            <label>
-            Age: <br/>
-            <input type="text" name ="age" value ={this.state.name} onChange={this.handleChange}/> <br/>
-            </label>
-            <label>
-            City: <br/>
-            <input type="text" name ="city" value ={this.state.name} onChange={this.handleChange}/> <br/>
-            </label>
-            <label>
-            Password: <br/>
-            <input type="text" name ="password" value ={this.state.name} onChange={this.handleChange}/> <br/>
-            </label>
-            <input type="submit" value="Submit" onClick={() => this.handleSubmit()} />           
+                Age: <br />
+                <input type="text" name="age" value={this.state.age} onChange={(event) => this.setState({age: event.target.value })} /> <br />
 
+                City: <br />
+                <input type="text" name="city" value={this.state.city} onChange={(event) => this.setState({city: event.target.value })} /> <br />
 
+                Password: <br />
+                <input type="text" name="password" value={this.state.password} onChange={(event) => this.setState({password: event.target.value })} /> <br />
+                <input type="submit" value="Submit" onClick={() => this.handleSubmit()} />
             </form>
-
-              //comment added
         );
-
-            
-            
-
-
-        
-
-
-    };
-    
-        
+    }
 }
 export default Signup
