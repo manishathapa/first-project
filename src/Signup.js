@@ -12,6 +12,7 @@ class Signup extends Component {
         }
     }
 // This is the correctc code
+// change code
     handleSubmit(event) {
         alert(this.state.fullname + " " + this.state.age + " " + this.state.city + " " + this.state.password);
     }
