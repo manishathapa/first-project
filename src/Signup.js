@@ -19,7 +19,7 @@ class Signup extends Component {
 
     render() {
         return (
-            <form>
+            <form style={{background: '#F00', height: '200px'}}>
                 Fullname: <br />
                 <input type="text" name="fullname" value={this.state.fullname} onChange={(event) => this.setState({fullname: event.target.value })} /> <br />
 
@@ -37,3 +37,4 @@ class Signup extends Component {
     }
 }
 export default Signup
+
